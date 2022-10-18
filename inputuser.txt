@@ -4,4 +4,4 @@
 001006|The Garden of Words|Shinkai Makoto|0
 00002|Nguyen Nguyen Anh|102210122|0
 00003|Truong Cao Khai|102210078|1
-001001|PTTKGT|P.T.Tao|4
+001001|PTTKGT|P.T.Tao|0

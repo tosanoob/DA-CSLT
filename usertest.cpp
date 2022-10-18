@@ -7,24 +7,38 @@
 using namespace std;
 
 int main() {
+    
+    ifstream inp("input.txt");
+    
+    ifstream inpuser("inputuser.txt");
+    
+    
+    DSSach a;
     DSUser lib;
-    ifstream inp("inputuser.txt");
-    ofstream out("outputuser.txt");
-
-    read_file(inp,lib);
+    read_file(inp,a);
+    read_file(inpuser,lib);
     cout<<"read passed\n";
-    User b;
-    cin>>b;
-    lib.push(b.getten(),b.getcmd());
-    lib.display(lib.gethead());
-    string a;
-    cout<<"Nhap ten tim kiem: ";
-    cin.ignore();
-    getline(cin,a,'\n');
-    User* temp = lib.searchname(a);
-    cout<<*temp;
-    cout<<"display passed\n";
-    write_file(out,lib);
-    cout<<"write passed\n";
+    //borrow;
+    User* returner = lib.searchname("Truong Tan Cuong");
+    int check = returner->trasach(returner->searchname("Another"),a);
+    returner->display(returner->gethead());
+    if (check==1) cout<<"return passed\n";
+
+    User* borrower = lib.searchname("Nguyen Nguyen Anh");
+    check = borrower->muonsach(a.searchname("PTTKGT"),a);
+    if (check==1) cout<<"borrow passed\n";
+    borrower->display(borrower->gethead());
+    
+    inp.close();
+    inpuser.close();
+
+    ofstream out("output.txt");
+    write_file(out,&a);
+    cout<<"write list passed\n";
+    out.close();
+    ofstream outuser("outputuser.txt");
+    write_file(outuser,lib);
+    cout<<"write user passed\n";
+    
     return 0;
 }

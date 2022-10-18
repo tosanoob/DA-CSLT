@@ -1,8 +1,8 @@
-001001|PTTKGT|P.T.Tao|4
+001001|PTTKGT|P.T.Tao|3
 001002|Operating System|V.A.|3
 001003|Colorful|Tomioka|1
 001004|Weathering With You|Shinkai Makoto|2
-001005|Another|Eriko|3
+001005|Another|Eriko|4
 001006|The Garden of Words|Shinkai Makoto|2
 001007|Your Name|Shinkai Makoto|2
 001008|Fune wo Amu|Takagiri|1

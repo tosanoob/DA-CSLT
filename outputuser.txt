@@ -1,8 +1,7 @@
-00001|Truong Tan Cuong|1022100533
+00001|Truong Tan Cuong|102210053|1
 001004|Weathering With You|Shinkai Makoto|0
-001005|Another|Eriko|0
 001006|The Garden of Words|Shinkai Makoto|0
-00002|Nguyen Nguyen Anh|1022101220
-00003|Truong Cao Khai|1022100781
-001001|PTTKGT|P.T.Tao|4
-00004|Vo Van Dat|1022100550
+00002|Nguyen Nguyen Anh|102210122|1
+001001|PTTKGT|P.T.Tao|0
+00003|Truong Cao Khai|102210078|1
+001001|PTTKGT|P.T.Tao|0
