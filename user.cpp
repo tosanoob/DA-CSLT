@@ -17,12 +17,15 @@ int User::muonsach(Sach *a, DSSach &lib) // con tro a tro vao danh sach thu vien
         return 0;
     }
     if (head == NULL)
-    {
-        Sach temp = *a; // tao doi tuong sao chep sang ds rieng cua nguoi dung
-        head = &temp;
-        tail = &temp;
-        temp.set_next(NULL);
-        temp.set_prev(NULL);
+    {   
+        cout<<"gethere0\n";
+        Sach* temp = new Sach(*a); // tao doi tuong sao chep sang ds rieng cua nguoi dung
+        cout<<"gethere1\n";
+        head = temp;
+        tail = temp;
+        temp->set_next(NULL);
+        temp->set_prev(NULL);
+        temp->setsoban(0);
         soluong++;
         a->giam1();
     }
@@ -41,6 +44,8 @@ int User::trasach(Sach *a, DSSach &lib) // con tro a tro vao sach trong thu vien
     Sach *tar = lib.searchma(ma);
     this->del_sach(a);
     tar->tang1();
+    this->soluong--;
+    return 1;
 }
 
 //--------------------------------------------------
@@ -118,7 +123,7 @@ int write_user(ofstream &out, User *a)
         cout << "Error output file";
         return 0;
     }
-    out << a->uid << '|' << a->ten << '|' << a->cmd << a->soluong << '\n';
+    out << a->uid << '|' << a->ten << '|' << a->cmd <<'|'<< a->soluong << '\n';
     write_file(out, a);
     return 1;
 }

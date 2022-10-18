@@ -115,7 +115,7 @@ class User : public DSSach
 
 public:
     // constructor
-    User(){}
+    User():DSSach(){}
     User(string ten, string cmd) : ten(ten),cmd(cmd){}
     User(const User &a) : ten(a.ten), cmd(a.cmd), uid(a.uid){
         next=NULL;
